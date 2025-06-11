@@ -86,5 +86,5 @@ make test
 ### Rodar Testes Manuais
 
 ```bash
-php tests/test_manual.php
+php tests/scripts/test_manual.php
 ```
