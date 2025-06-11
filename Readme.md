@@ -23,7 +23,7 @@ desafio-carrinho-compras/
 │ └── CarrinhoTest.php
 ├── docker-compose.yml
 ├── composer.json
-├── Makefile (opcional)
+├── Makefile 
 └── README.md
 ```
 
