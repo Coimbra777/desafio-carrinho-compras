@@ -7,7 +7,6 @@ use App\CalculadoraPagamento;
 use App\Pagamentos\Pix;
 use App\Pagamentos\CartaoAVista;
 use App\Pagamentos\CartaoParcelado;
-use InvalidArgumentException;
 
 class CarrinhoTest extends TestCase
 {
