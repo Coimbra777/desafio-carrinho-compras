@@ -4,20 +4,45 @@ namespace App;
 
 class Carrinho
 {
-    /** @var Item[] */
-    private array $itens;
+    /**
+     * @var Item[]
+     */
+    private array $itens = [];
 
-    public function __construct(array $itens)
+    public function __construct(array $itens = [])
     {
-        $this->itens = $itens;
+        foreach ($itens as $item) {
+            $this->adicionarItem($item);
+        }
+    }
+
+    public function adicionarItem(Item $item): void
+    {
+        $this->itens[] = $item;
+    }
+
+    public function removerItemPorNome(string $nome): void
+    {
+        foreach ($this->itens as $index => $item) {
+            if (strtolower($item->nome) === strtolower($nome)) {
+                unset($this->itens[$index]);
+                $this->itens = array_values($this->itens);
+                return;
+            }
+        }
     }
 
     public function total(): float
     {
-        $total = 0.0;
+        $soma = 0.0;
         foreach ($this->itens as $item) {
-            $total += $item->subtotal();
+            $soma += $item->subtotal();
         }
-        return $total;
+        return $soma;
+    }
+
+    public function itens(): array
+    {
+        return $this->itens;
     }
 }

@@ -1,11 +1,20 @@
+# Sobe os containers em segundo plano com build
 up:
-\tdocker-compose up -d --build
+	docker compose up -d --build
 
+# Derruba todos os containers
 down:
-\tdocker-compose down
+	docker compose down
 
+# Executa os testes PHPUnit
 test:
-\tdocker-compose run --rm app composer install && docker-compose run --rm app ./vendor/bin/phpunit
+	docker compose run --rm app vendor/bin/phpunit tests
 
+# Acessa o bash do container app
 bash:
-\tdocker-compose run --rm app bash
+	docker compose run --rm app bash
+
+# Reconstrói a imagem (sem cache) e sobe os containers
+rebuild:
+	docker compose build --no-cache
+	docker compose up -d
