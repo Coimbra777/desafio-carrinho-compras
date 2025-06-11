@@ -62,6 +62,10 @@ desafio-carrinho-compras/
 git clone https://github.com/Coimbra777/desafio-carrinho-compras.git
 ``````
 
+````bash
+cd desafio-carrinho-compras/
+``````
+
 ---
 
 ### Comandos Úteis (`Makefile`)
