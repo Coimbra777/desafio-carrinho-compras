@@ -23,19 +23,20 @@ $pix = new Pix();
 echo "Total com Pix: R$ " . CalculadoraPagamento::calcular($carrinho, $pix) . PHP_EOL;
 
 // Pagamento com Cartão à Vista
-$avista = new CartaoAVista();
-echo "Total com Cartão à Vista: R$ " . CalculadoraPagamento::calcular($carrinho, $avista) . PHP_EOL;
+/* $avista = new CartaoAVista();
+echo "Total com Cartão à Vista: R$ " . CalculadoraPagamento::calcular($carrinho, $avista) . PHP_EOL; */
 
 // Pagamento Parcelado em (n)x
-$parcelamento = 10;
+/* $parcelamento = 10;
 $parcelado = new CartaoParcelado($parcelamento);
-echo "Total parcelado em " . $parcelamento . "x: R$ " . CalculadoraPagamento::calcular($carrinho, $parcelado) . PHP_EOL;
+echo "Total parcelado em " . $parcelamento . "x: R$ " . CalculadoraPagamento::calcular($carrinho, $parcelado) . PHP_EOL; */
 
 // Remove item
-$carrinho->removerItemPorNome("Camisa");
-echo "Total após remover 'Camisa': R$ " . $carrinho->total() . PHP_EOL;
+/* $carrinho->removerItemPorNome("Camisa");
+echo "Total após remover 'Camisa': R$ " . $carrinho->total() . PHP_EOL; */
 
-$carrinho = new Carrinho();
+// Exemplo com valores quebrados
+/* $carrinho = new Carrinho();
 $carrinho->adicionarItem(new Item("Livro", 49.99, 1));
 $carrinho->adicionarItem(new Item("Caderno", 15.50, 2));
 $carrinho->adicionarItem(new Item("Caneta", 2.75, 3));
@@ -46,4 +47,4 @@ $pix = new Pix();
 echo "Total com Pix: R$ " . CalculadoraPagamento::calcular($carrinho, $pix) . PHP_EOL;
 
 $cartaoParcelado = new CartaoParcelado(2);
-echo "Total parcelado em 2x: R$ " . CalculadoraPagamento::calcular($carrinho, $cartaoParcelado) . PHP_EOL;
+echo "Total parcelado em 2x: R$ " . CalculadoraPagamento::calcular($carrinho, $cartaoParcelado) . PHP_EOL; */
