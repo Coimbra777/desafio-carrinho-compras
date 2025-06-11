@@ -1,9 +1,10 @@
-# 🛒 Desafio: Carrinho de Compras com Regras de Pagamento
+# Desafio: Carrinho de Compras com Regras de Pagamento
 
 Este projeto é uma simulação de carrinho de compras simples em PHP, com regras específicas de cálculo para diferentes formas de pagamento: Pix, Cartão à Vista e Cartão Parcelado.
 
 ---
 
+```bash
 🗂 Estrutura
 
 desafio-carrinho-compras/
@@ -24,6 +25,7 @@ desafio-carrinho-compras/
 ├── composer.json
 ├── Makefile (opcional)
 └── README.md
+```
 
 ---
 
@@ -54,7 +56,13 @@ desafio-carrinho-compras/
 - Docker Compose
 - Make (GNU Make)
 
-### 🔧 Comandos Úteis (`Makefile`)
+### Clone o projeto
+
+````bash
+git clone https://github.com/Coimbra777/desafio-carrinho-compras.git
+```
+
+### Comandos Úteis (`Makefile`)
 
 | Comando     | Descrição                                   |
 | ----------- | ------------------------------------------- |
@@ -63,13 +71,13 @@ desafio-carrinho-compras/
 | `make test` | Executa os testes automatizados com PHPUnit |
 | `make bash` | Acessa o bash do container da aplicação     |
 
-### 🧪 Rodando os Testes
+### Rodando os Testes
 
 ```bash
 make test
-```
+````
 
-### 🧪 Rodar Testes Manuais
+### Rodar Testes Manuais
 
 ```bash
 php tests/test_manual.php
