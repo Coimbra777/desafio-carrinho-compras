@@ -77,7 +77,7 @@ cd desafio-carrinho-compras/
 | `make test` | Executa os testes automatizados com PHPUnit |
 | `make bash` | Acessa o bash do container da aplicação     |
 
-### Rodando os Testes
+### Rodar os Testes
 
 ```bash
 make test
